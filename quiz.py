@@ -30,3 +30,49 @@ def questions_geographie():
         "Pérou",
         ["Mexique", "Pérou", "Brésil", "Colombie"]
     )
+    # Thèmes : Sciences & Sport
+
+def questions_sciences():
+    global score
+    print("\n--- 🔬 Sciences ---")
+    score += poser_question(
+        "Quelle planète est la plus proche du soleil ?",
+        "Mercure",
+        ["Vénus", "Mercure", "Mars", "Terre"]
+    )
+    score += poser_question(
+        "Combien d'os a le corps humain adulte ?",
+        "206",
+        ["150", "206", "312", "98"]
+    )
+
+def questions_sport():
+    global score
+    print("\n--- ⚽ Sport ---")
+    score += poser_question(
+        "Combien de joueurs dans une équipe de football ?",
+        "11",
+        ["9", "10", "11", "12"]
+    )
+    score += poser_question(
+        "Dans quel pays ont eu lieu les JO 2024 ?",
+        "France",
+        ["Japon", "USA", "France", "Espagne"]
+    )
+
+# Lancement du quiz
+print("🎯 Bienvenue dans le Quiz Culture Générale !")
+print("=" * 45)
+
+questions_geographie()
+questions_sciences()
+questions_sport()
+
+print("\n" + "=" * 45)
+print(f"🏆 Votre score final : {score} / 9")
+if score >= 7:
+    print("Excellent ! Vous êtes un(e) champion(ne) !")
+elif score >= 4:
+    print("Pas mal ! Continuez à apprendre !")
+else:
+    print("Courage, réessayez !")
