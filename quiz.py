@@ -60,9 +60,17 @@ def questions_sport():
         ["Japon", "USA", "France", "Espagne"]
     )
 
+    def afficher_regles():
+    print("\n📋 Règles du jeu :")
+    print("  - Répondez en tapant le numéro de votre choix")
+    print("  - 9 questions au total")
+    print("  - 1 point par bonne réponse")
+    print("  - Bonne chance !\n")
+
 # Lancement du quiz
 print("🎯 Bienvenue dans le Quiz Culture Générale !")
 print("=" * 45)
+afficher_regles()
 
 questions_geographie()
 questions_sciences()
